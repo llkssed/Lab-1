@@ -1,0 +1,31 @@
+{
+    "name": "My Design",
+    "canvas": {
+        "width": 800,
+        "height": 600,
+        "elements": [
+            {
+                "type": "Circle",
+                "properties": {
+                    "color": "red",
+                    "radius": 50
+                }
+            },
+            {
+                "type": "Rectangle",
+                "properties": {
+                    "color": "blue",
+                    "width": 100,
+                    "height": 200
+                }
+            },
+            {
+                "type": "Text",
+                "properties": {
+                    "content": "Hello, World!",
+                    "font_size": 24
+                }
+            }
+        ]
+    }
+}

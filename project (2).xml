@@ -1,1 +1,0 @@
-<project name="My Design"><canvas width="800" height="600"><element type="Circle"><color>red</color><radius>50</radius></element><element type="Rectangle"><color>blue</color><width>100</width><height>200</height></element><element type="Text"><content>Hello, World!</content><font_size>24</font_size></element></canvas></project>

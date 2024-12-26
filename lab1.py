@@ -1,7 +1,6 @@
 import json
 import xml.etree.ElementTree as ET
 
-# Исключения
 class InvalidShapeError(Exception):
     def __init__(self, message="Недопустимая форма"):
         self.message = message
@@ -17,7 +16,6 @@ class FileWriteError(Exception):
         self.message = message
         super().__init__(self.message)
 
-# Базовые классы
 class Shape:
     def __init__(self, color):
         if not color:
@@ -31,7 +29,7 @@ class Circle(Shape):
     def __init__(self, color, radius):
         super().__init__(color)
         if radius <= 0:
-            raise ValueError("Радиус должен быть положительным числом")
+            raise ValueError("Радиус должен быть положительным")
         self.radius = radius
 
     def draw(self):
@@ -41,7 +39,7 @@ class Rectangle(Shape):
     def __init__(self, color, width, height):
         super().__init__(color)
         if width <= 0 or height <= 0:
-            raise ValueError("Ширина и высота должны быть положительными числами")
+            raise ValueError("Ширина и высота должны быть положительными")
         self.width = width
         self.height = height
 
@@ -52,7 +50,7 @@ class Line(Shape):
     def __init__(self, color, length):
         super().__init__(color)
         if length <= 0:
-            raise ValueError("Длина линии должна быть положительным числом")
+            raise ValueError("Длина линии должна быть положительным")
         self.length = length
 
     def draw(self):
@@ -78,7 +76,7 @@ class Text:
         self.font_size = font_size
 
     def draw(self):
-        return f"Рисую текст '{self.content}' с размером шрифта {self.font_size}"
+        return f"Пишу текст '{self.content}' с размером шрифта {self.font_size}"
 
 class Group:
     def __init__(self):
